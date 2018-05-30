@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
     }
     
     func openStatisticTableView() {
-        guard let vc = StatisticTableViewController.storyboardInstance(storyboardName: "Main") else { return }
+        guard let vc = StatisticTableViewController.storyboardInstance() else { return }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = vc
     }

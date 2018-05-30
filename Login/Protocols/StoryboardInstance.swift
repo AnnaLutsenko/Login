@@ -9,13 +9,23 @@
 import UIKit
 import Foundation
 
+extension UIStoryboard {
+    static var main: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: .main)
+    }
+}
+
 protocol StoryboardInstance {
     static func storyboardInstance(storyboardName: String, controllerID: String) -> Self?
 }
 
 extension StoryboardInstance where Self: UIViewController {
     
-    static func storyboardInstance() -> Self? {
+    static var defaultControllerID: String {
+        return String(describing: self)
+    }
+    
+    static func storyboardInstance(from storyboard: UIStoryboard = .main, controllerID: String = defaultControllerID) -> Self? {
         let className = String(describing: self)
         return self.storyboardInstance(storyboardName: className, controllerID: className)
     }
