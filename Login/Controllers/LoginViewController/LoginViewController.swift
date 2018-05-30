@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Action
     @IBAction func signUp(_ sender: UIButton) {
-        guard let vc = SignUpViewController.storyboardInstance(storyboardName: "Main") else { return }
+        guard let vc = SignUpViewController.storyboardInstance() else { return }
         navigationController?.pushViewController(vc, animated: true)
     }
     
