@@ -150,7 +150,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="editChanged:" destination="Uf8-A1-3Mg" eventType="editingChanged" id="GZ7-SK-ccH"/>
                                 </connections>
